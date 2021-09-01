@@ -1,0 +1,15 @@
+@import "../../global/variables";
+
+.download_container {
+  margin-top: 60px;
+
+  & .title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+
+    color: $text-500;
+  }
+}

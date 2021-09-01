@@ -1,0 +1,86 @@
+@import "../../global/mixins";
+
+.subject_item_wrapper {
+  padding-top: 40px;
+
+  @include breakpoint-up(fromTabletSm) {
+    padding-top: 60px;
+  }
+
+  @include breakpoint-up(fromTabletSm) {
+    padding-top: 80px;
+  }
+
+  & .content {
+    & .sub_title {
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: 0.1em;
+
+      color: #a0a0a0;
+    }
+
+    & .player_overlay {
+      width: 100%;
+
+      border-radius: 8px;
+    }
+
+    grid-column: 1 / -1;
+
+    @include breakpoint-up(fromTabletSm) {
+      grid-column: 1 / -1;
+    }
+
+    @include breakpoint-up(fromDesktopSm) {
+      grid-column: 4 / -9;
+    }
+  }
+
+  & .menu {
+    position: fixed;
+    left: -100%;
+    grid-column: 1 / -1;
+    transition: background 0.3s ease 0s;
+
+    @include breakpoint-down(fromTabletSm) {
+      &.open {
+        left: 00px;
+        right: 00px;
+        top: 0;
+        bottom: 0;
+
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(6px);
+      }
+    }
+    @include breakpoint-up(fromTabletSm) {
+      grid-column: 1 / -1;
+    }
+
+    @include breakpoint-up(fromDesktopSm) {
+      display: block;
+      position: relative;
+      left: unset;
+      grid-column: 18 / -2;
+    }
+  }
+}
+
+.menu_mobile_idinator {
+  cursor: pointer;
+  position: fixed;
+  top: 22px;
+  right: 20px;
+
+  z-index: 6;
+
+  @include breakpoint-up(fromTabletSm) {
+    right: 50px;
+  }
+
+  @include breakpoint-up(fromDesktopSm) {
+    display: none;
+    pointer-events: none;
+  }
+}

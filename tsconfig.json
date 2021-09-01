@@ -14,6 +14,12 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/elements/CourseCard/CourseCard.test.ts"],
+  "exclude": ["node_modules"],
+  "baseUrl": ".",
+  "paths": {
+      "@styles/*": [
+          "src/styles/*"
+      ],
+  }
 }

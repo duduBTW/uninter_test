@@ -1,0 +1,65 @@
+@import "../../global/mixins";
+@import "../../global/variables";
+
+.nav_wrapper {
+  z-index: 4;
+  height: $nav-offset;
+  width: 100%;
+
+  position: sticky;
+  top: 0px;
+
+  display: grid;
+
+  grid-template-columns: repeat(6, minmax(0rem, 1fr));
+  padding: 0px 20px;
+
+  @include breakpoint-up(fromTabletSm) {
+    grid-template-columns: repeat(13, minmax(0rem, 1fr));
+    grid-column-gap: 2rem;
+
+    padding: 0px 50px;
+  }
+
+  @include breakpoint-up(fromDesktopSm) {
+    grid-template-columns: repeat(24, minmax(0rem, 1fr));
+    gap: 20px;
+    padding: 0px;
+  }
+
+  background: #ffffff;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+
+  & .header {
+    grid-column: 1 / -1;
+
+    @include breakpoint-up(fromTabletSm) {
+      grid-column: 1 / -1;
+    }
+
+    @include breakpoint-up(fromDesktopSm) {
+      grid-column: 4 / -9;
+    }
+
+    & a {
+      align-self: center;
+    }
+
+    display: flex;
+    gap: 30px;
+
+    & .nav_title {
+      align-self: center;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 37px;
+      /* identical to box height */
+
+      letter-spacing: 0.1em;
+
+      color: #24042c;
+    }
+  }
+}

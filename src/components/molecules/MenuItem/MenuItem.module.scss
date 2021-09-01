@@ -1,0 +1,73 @@
+@import "../../global/mixins";
+@import "../../global/variables";
+
+.menu_item {
+  background: #fbfbfb;
+  border-radius: 12px;
+
+  &.menu_item_completed {
+    transition: background 0.2s ease 0s;
+
+    background: $complete;
+
+    & .header {
+      &:hover {
+        background: #f1fbe6;
+      }
+    }
+  }
+
+  &.menu_item_open {
+    transition: background 0.2s ease 0s;
+    background: #ffffff;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.15);
+
+    & .header {
+      &:hover {
+        background: #f5f4f4;
+      }
+    }
+  }
+
+  & .header {
+    padding: 20px 30px 20px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+
+    &:hover {
+      background: #f7f7f7;
+    }
+
+    & .left {
+      flex: 1;
+
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      & .progress_container {
+        height: 44px;
+        width: 44px;
+
+        & .progress_text {
+          font-size: 8px;
+          margin-bottom: 14px;
+        }
+      }
+
+      & .title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 29px;
+        letter-spacing: 0.1em;
+
+        color: #000000;
+      }
+    }
+  }
+}

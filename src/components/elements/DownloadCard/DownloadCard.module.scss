@@ -1,0 +1,27 @@
+.download_wrapper {
+  cursor: pointer;
+  padding: 30px;
+  background: #fbfbfb;
+  border-radius: 12px;
+
+  display: flex;
+  gap: 30px;
+
+  &:hover {
+    background: #f7f7f7;
+  }
+
+  & .download_label {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: 0.1em;
+
+    color: #000000;
+  }
+}
+
+.link {
+  text-decoration: none;
+}

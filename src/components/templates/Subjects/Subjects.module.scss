@@ -1,0 +1,17 @@
+@import "../../global/mixins";
+
+.subject_wrapper {
+  padding-top: 80px;
+
+  & .title {
+    grid-column: 1 / -1;
+
+    @include breakpoint-up(fromTabletSm) {
+      grid-column: 1 / -1;
+    }
+
+    @include breakpoint-up(fromDesktopSm) {
+      grid-column: 4 / -6;
+    }
+  }
+}

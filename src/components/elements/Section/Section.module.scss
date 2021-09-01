@@ -1,0 +1,20 @@
+@import "../../global/mixins";
+
+.section {
+  padding: 15px;
+  display: grid;
+
+  grid-template-columns: repeat(6, minmax(0rem, 1fr));
+  gap: 20px;
+
+  @include breakpoint-up(fromTabletSm) {
+    grid-template-columns: repeat(13, minmax(0rem, 1fr));
+    grid-column-gap: 2rem;
+    padding: 50px;
+  }
+
+  @include breakpoint-up(fromDesktopSm) {
+    grid-template-columns: repeat(24, minmax(0rem, 1fr));
+    padding: 0px;
+  }
+}

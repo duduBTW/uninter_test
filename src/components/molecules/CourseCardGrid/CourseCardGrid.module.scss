@@ -1,0 +1,21 @@
+@import "../../global/mixins";
+
+.courses_wrapper {
+  grid-column: 1 / -1;
+
+  @include breakpoint-up(fromTabletSm) {
+    grid-column: 1 / -1;
+  }
+
+  @include breakpoint-up(fromDesktopSm) {
+    grid-column: 4 / -6;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  @include breakpoint-up(fromDesktopSm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  gap: 20px;
+}
